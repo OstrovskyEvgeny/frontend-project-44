@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-import gameLoop from '../src/brain-even/game-loop.js';
-import getName from '../src/cli.js';
+import play from '../src/index.js';
+import { gameRulesEven } from '../src/games/game-rules.js';
+import { getRandomNum } from '../src/games/tasks-generation.js';
+import { evenTaskCheck } from '../src/games/tasks-check.js';
 
-const userName = getName();
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-gameLoop(userName);
+play(gameRulesEven, getRandomNum, evenTaskCheck);
