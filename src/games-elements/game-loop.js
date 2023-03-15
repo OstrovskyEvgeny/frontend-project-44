@@ -5,7 +5,6 @@ export default (userName, taskGeneration, checkRightAnswer) => {
     const currentTask = taskGeneration(); // генерируем задание
     console.log(`Question: ${currentTask}`); // задаем вопрос
     const userAnswer = readlineSync.question('Your answer: '); // получаем ответ на вопрос от игрока
-
     const rightAnswer = checkRightAnswer(currentTask);// узнаем правельный ответ
     if (userAnswer === rightAnswer) {
       console.log('Correct!');

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import play from '../src/index.js';
-import { gameRulesEven } from '../src/games/game-rules.js';
-import { getRandomNum } from '../src/games/tasks-generation.js';
-import { evenTaskCheck } from '../src/games/tasks-check.js';
+import { gameRulesEven } from '../src/games-elements/game-rules.js';
+import { getRandom } from '../src/games-elements/tasks-generation.js';
+import { taskCheckEven } from '../src/games-elements/tasks-check.js';
 
-play(gameRulesEven, getRandomNum, evenTaskCheck);
+play(gameRulesEven, getRandom, taskCheckEven);
