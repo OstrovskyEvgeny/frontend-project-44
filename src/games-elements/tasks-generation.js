@@ -9,4 +9,10 @@ const getTaskCalc = () => {
   return task;
 };
 
-export { getRandom, getTaskCalc };
+const getTaskGcd = () => {
+  const a = getRandom();
+  const b = getRandom();
+  return `${a} ${b}`;
+};
+
+export { getRandom, getTaskCalc, getTaskGcd };

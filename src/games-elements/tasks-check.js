@@ -1,9 +1,9 @@
-const taskCheckEven = (currentTask) => {
+const CheckEven = (currentTask) => {
   const rightAnswer = currentTask % 2 === 0 ? 'yes' : 'no';
   return rightAnswer;
 };
 
-const taskCheckCalc = (currentTask) => {
+const CheckCalc = (currentTask) => {
   let result = 0;
   const arrTask = currentTask.split(' ');
   const a = Number(arrTask[0]);
@@ -24,4 +24,20 @@ const taskCheckCalc = (currentTask) => {
   return String(result);
 };
 
-export { taskCheckEven, taskCheckCalc };
+const CheckGcd = (currentTask) => {
+  const arr = currentTask.split(' ');
+  let a = arr[0];
+  let b = arr[1];
+
+  while (a !== b) {
+    if (a > b) {
+      a -= b;
+    } else {
+      b -= a;
+    }
+  }
+
+  return String(a);
+};
+
+export { CheckEven, CheckCalc, CheckGcd };

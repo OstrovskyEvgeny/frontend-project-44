@@ -2,6 +2,6 @@
 import play from '../src/index.js';
 import { gameRulesEven } from '../src/games-elements/game-rules.js';
 import { getRandom } from '../src/games-elements/tasks-generation.js';
-import { taskCheckEven } from '../src/games-elements/tasks-check.js';
+import { CheckEven } from '../src/games-elements/tasks-check.js';
 
-play(gameRulesEven, getRandom, taskCheckEven);
+play(gameRulesEven, getRandom, CheckEven);
