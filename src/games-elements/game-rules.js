@@ -1,5 +1,8 @@
 const gameRulesEven = 'Answer "yes" if the number is even, otherwise answer "no".';
 const gameRulesCalc = 'What is the result of the expression?';
 const gameRulesGcd = 'Find the greatest common divisor of given numbers.';
+const gameRulesProgression = 'What number is missing in the progression?';
 
-export { gameRulesEven, gameRulesCalc, gameRulesGcd };
+export {
+  gameRulesEven, gameRulesCalc, gameRulesGcd, gameRulesProgression,
+};

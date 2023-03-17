@@ -1,9 +1,9 @@
-const CheckEven = (currentTask) => {
+const checkEven = (currentTask) => {
   const rightAnswer = currentTask % 2 === 0 ? 'yes' : 'no';
   return rightAnswer;
 };
 
-const CheckCalc = (currentTask) => {
+const checkCalc = (currentTask) => {
   let result = 0;
   const arrTask = currentTask.split(' ');
   const a = Number(arrTask[0]);
@@ -24,10 +24,8 @@ const CheckCalc = (currentTask) => {
   return String(result);
 };
 
-const CheckGcd = (currentTask) => {
-  const arr = currentTask.split(' ');
-  let a = arr[0];
-  let b = arr[1];
+const checkGcd = (currentTask) => {
+  let [a, b] = currentTask.split(' ');
 
   while (a !== b) {
     if (a > b) {
@@ -40,4 +38,14 @@ const CheckGcd = (currentTask) => {
   return String(a);
 };
 
-export { CheckEven, CheckCalc, CheckGcd };
+const checkProgression = (currentTask) => { // переписать универстально для всех возможноых случаев
+  const index = currentTask.indexOf('..');
+  const firstElement = currentTask[0];
+  const step = currentTask[1] - firstElement;
+  const result = firstElement + (index * step);
+  return String(result);
+};
+
+export {
+  checkEven, checkCalc, checkGcd, checkProgression,
+};
