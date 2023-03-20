@@ -14,20 +14,28 @@ export const getTask = () => {
   const randomIndex = randomNum(0, 9);
   coll[randomIndex] = '..';
 
-  return coll;
+  return coll.join(' ');
 };
 
 export const verification = (currentTask) => {
-  const index = currentTask.indexOf('..');
+  let arr = currentTask.split(' ');
+  arr = arr.map((current) => {
+    if (current !== '..') {
+      return Number(current);
+    }
+    return current;
+  });
+
+  const index = arr.indexOf('..');
   let step = null;
   let result = null;
 
   if (index < 5) {
-    step = currentTask[9] - currentTask[8];
-    result = currentTask[index + 1] - step;
+    step = arr[9] - arr[8];
+    result = arr[index + 1] - step;
   } else {
-    step = currentTask[1] - currentTask[0];
-    result = currentTask[index - 1] + step;
+    step = arr[1] - arr[0];
+    result = arr[index - 1] + step;
   }
 
   return String(result);
