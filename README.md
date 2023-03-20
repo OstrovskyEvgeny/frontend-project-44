@@ -11,3 +11,6 @@ brain-even:
 
 brain-gcd:
 [![asciicast](https://asciinema.org/a/DbcQwRjYpQRzjeitdZWmkCsMH.svg)](https://asciinema.org/a/DbcQwRjYpQRzjeitdZWmkCsMH)
+
+brain-progression:
+[![asciicast](https://asciinema.org/a/MZkOupLhT55ZAmGK97IRRo3j5.svg)](https://asciinema.org/a/MZkOupLhT55ZAmGK97IRRo3j5)
