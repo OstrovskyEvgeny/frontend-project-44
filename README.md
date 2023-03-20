@@ -4,6 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/d3bc8f3eec6292482b69/maintainability)](https://codeclimate.com/github/OstrovskyEvgeny/frontend-project-44/maintainability)
 
 ## Description
+
 "Mind Games" is a set of five console games based on the popular mobile brain-pumping apps. Each game asks questions that need to be answered correctly. After three correct answers, the game is considered completed. Incorrect answers end the game and prompt you to play it again. Games:
 
 1.Calculator. Arithmetic expressions to be calculated.

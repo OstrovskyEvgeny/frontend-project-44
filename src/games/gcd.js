@@ -12,12 +12,13 @@ export const getTask = () => {
 export const verification = (currentTask) => {
   let [a, b] = currentTask.split(' ');
 
-  while (a !== b) {
+  while (a > b || b > a) {
     if (a > b) {
       a -= b;
     } else {
       b -= a;
     }
+    console.log(a, b);
   }
 
   return String(a);
