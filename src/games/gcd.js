@@ -18,7 +18,6 @@ export const verification = (currentTask) => {
     } else {
       b -= a;
     }
-    console.log(a, b);
   }
 
   return String(a);
