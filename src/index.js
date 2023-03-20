@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import getName from './cli.js';
 
-export default (gameRules, taskGeneration, checkRightAnswer) => {
+export default (gameRules, taskGeneration, verification) => {
   const userName = getName();
   console.log(gameRules);
 
@@ -9,7 +9,7 @@ export default (gameRules, taskGeneration, checkRightAnswer) => {
     const currentTask = taskGeneration(); // генерируем задание
     console.log(`Question: ${currentTask}`); // задаем вопрос
     const userAnswer = readlineSync.question('Your answer: '); // получаем ответ на вопрос от игрока
-    const rightAnswer = checkRightAnswer(currentTask);// узнаем правельный ответ
+    const rightAnswer = verification(currentTask);// узнаем правельный ответ
 
     if (userAnswer === rightAnswer) {
       console.log('Correct!');
