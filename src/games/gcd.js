@@ -10,15 +10,13 @@ export const getTask = () => {
 };
 
 export const verification = (currentTask) => {
-  let [a, b] = currentTask.split(' ');
+  const [a, b] = currentTask.split(' ');
 
-  while (a > b || b > a) {
-    if (a > b) {
-      a -= b;
-    } else {
-      b -= a;
-    }
-  }
+  const nod = (x, y) => {
+    if (y > x) return nod(y, x);
+    if (!y) return x;
+    return nod(y, x % y);
+  };
 
-  return String(a);
+  return nod(a, b);
 };
