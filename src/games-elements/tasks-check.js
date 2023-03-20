@@ -38,11 +38,19 @@ const checkGcd = (currentTask) => {
   return String(a);
 };
 
-const checkProgression = (currentTask) => { // переписать универстально для всех возможноых случаев
+const checkProgression = (currentTask) => {
   const index = currentTask.indexOf('..');
-  const firstElement = currentTask[0];
-  const step = currentTask[1] - firstElement;
-  const result = firstElement + (index * step);
+  let step = null;
+  let result = null;
+
+  if (index < 5) {
+    step = currentTask[9] - currentTask[8];
+    result = currentTask[index + 1] - step;
+  } else {
+    step = currentTask[1] - currentTask[0];
+    result = currentTask[index - 1] + step;
+  }
+
   return String(result);
 };
 
