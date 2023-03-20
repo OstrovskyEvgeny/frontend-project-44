@@ -14,7 +14,7 @@ export const verification = (currentTask) => {
 
   const nod = (x, y) => {
     if (y > x) return nod(y, x);
-    if (!y) return x;
+    if (!y) return String(x);
     return nod(y, x % y);
   };
 
